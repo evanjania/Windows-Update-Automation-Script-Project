@@ -1,6 +1,6 @@
 # Windows Update Automation Script
 # Author: Evan Jania
-# Date: 2025
+# Date: Dec 10 2025
 # Description: Automates Windows updates with logging and error handling
 
 param(
@@ -63,7 +63,6 @@ function Get-WindowsUpdateStatus {
         foreach ($update in $searchResult.Updates) {
             Write-Log "  - $($update.Title)" -Level INFO
         }
-        
         return $searchResult.Updates
     }
     catch {
